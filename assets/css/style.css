@@ -1,0 +1,27 @@
+.center-custom {
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    margin-left: -50px;
+    height: 45px;
+}
+
+
+.text-center-image{
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 40%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.profile-main {
+    background: #fff;
+    margin: 2em auto;
+    padding: 0em 0em;
+    border-radius: 4px;
+}
