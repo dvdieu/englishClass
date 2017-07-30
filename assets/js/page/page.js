@@ -12,7 +12,9 @@ JS_UPLOAD_IMGUR = {
             success: function (dataImage) {
                 console.log(dataImage);
                 if (dataImage.status == 200) {
+                    //Hiển thị
                     $(view).attr("src", dataImage.data.link);
+                    //Cập nhật vào Data Base
                 }
                 else {
 
