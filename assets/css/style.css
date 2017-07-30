@@ -25,3 +25,32 @@
     padding: 0em 0em;
     border-radius: 4px;
 }
+
+.container-upload {
+    position: relative;
+}
+
+.middle-upload {
+    transition: .1s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.container-upload:hover .image-upload {
+    opacity: 0.3;
+}
+
+.container-upload:hover .middle-upload {
+    opacity: 1;
+}
+
+.text-upload {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}

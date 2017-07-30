@@ -15,6 +15,7 @@
     <!--  Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -139,25 +140,57 @@
                             <div class="card-content">
                                 <form>
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Họ tên</label>
                                                 <input type="text" class="form-control border-input"
-                                                       placeholder="Họ tên" value="Doãn Điều">
+                                                       id="txtFullName"
+                                                       placeholder="Họ tên" value="">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nghề nghiệp</label>
                                                 <input type="text" class="form-control border-input"
-                                                       placeholder="Nghề nghiệp" value="Developer">
+                                                       id="txtJobTitle"
+                                                       placeholder="Nghề nghiệp" value="">
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Địa chỉ email</label>
-                                                <input type="email" class="form-control border-input"
-                                                       placeholder="Email">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control border-input"
+                                                       id="txtEmail"
+                                                       disabled
+                                                       placeholder="Email   " value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Số điện thoại</label>
+                                                <input type="text" class="form-control border-input"
+                                                       id="txtPhone"
+                                                       placeholder="Số điện thoại" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Giới tính</label>
+                                                <input type="text" class="form-control border-input"
+                                                       id="txtGender"
+                                                       placeholder="Giới tinh" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Ngày sinh</label>
+                                                <input type="text" class="form-control border-input datetimepicker"
+                                                       id="txtBirthDay"
+                                                       placeholder="Ngày sinh" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -166,31 +199,8 @@
                                             <div class="form-group">
                                                 <label>Địa chỉ</label>
                                                 <input type="text" class="form-control border-input"
-                                                       placeholder="Địa chỉ" value="Việt nam">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>SĐT</label>
-                                                <input type="text" class="form-control border-input" placeholder="SĐT"
-                                                       value="01657012729">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Giới tính</label>
-                                                <input type="text" class="form-control border-input"
-                                                       placeholder="Giới tính" value="Nam">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Quốc gia</label>
-                                                <input type="number" class="form-control border-input"
-                                                       placeholder="Quốc gia">
+                                                       id="txtAddress"
+                                                       placeholder="Địa chỉ" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -210,7 +220,16 @@
                             </div>
                             <div class="card-content">
                                 <div class="author">
-                                    <img class="avatar border-white" src="assets/img/faces/face-2.jpg" alt="..."/>
+                                    <div class="container-upload">
+                                        <img id="avatarUser" class="img-upload avatar" src="assets/img/faces/face-2.jpg"
+                                             alt="..."/>
+                                        <input id="imageChange" type="file" placeholder="" style="display: none;">
+                                        <div class="middle-upload">
+                                            <button id="btnUploadImage" class="btn btn-youtube btn-fill img-circle"><i
+                                                    class="fa fa-picture-o "></i></button>
+                                        </div>
+                                    </div>
+
                                     <h4 class="title">Doãn Điều<br/>
                                         <a href="#">
                                             <small>@doandieu</small>
@@ -219,25 +238,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="title text-center">Đổi ảnh đại diện</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <span class="btn-block"><input type="file" placeholder=""></span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button class="btn center-block">Save</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -278,7 +279,14 @@
 <!--  Full Calendar Plugin    -->
 <script src="assets/js/fullcalendar.min.js"></script>
 
-<!-- English Class Core javascript and methods for Demo purpose -->
 <script src="assets/js/paper-dashboard.js"></script>
 
+<script src="assets/js/page/page.js"></script>
+<script>
+    JSCORE.initDatePicker(".datetimepicker");
+    $("#btnUploadImage").click(function () {
+        $("#imageChange").click();
+    });
+    JSCORE.uploadWithImgur("#imageChange", "#avatarUser");
+</script>
 </html>

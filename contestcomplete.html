@@ -324,24 +324,10 @@
 <script src="assets/js/jquery.sharrre.js"></script>
 
 <script src="assets/js/paper-dashboard.js"></script>
+<script src="assets/js/page/page.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-
-        //Thay đổi text của ô tỉ lệ %
-        $('#chartDashboard').html("100%");
-
-        //Thay đổi % của đường kẻ
-        $('#chartDashboard').attr('data-percent', "100");
-
-        //Vẽ
-        $('#chartDashboard').easyPieChart({
-            lineWidth: 5, //Độ dày
-            size: 160, //Kích thước px
-            scaleColor: false,
-            trackColor: 'rgba(255,255,255,.25)',
-            barColor: '#FFFFFF', //Màu chữ
-            animate: ({duration: 2000, enabled: true})
-        });
+        JSCORE.initChartCycle("#chartDashboard");
     });
 </script>
 
